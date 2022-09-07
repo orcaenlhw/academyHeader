@@ -17,7 +17,7 @@
 </ion-header>
 
 <!-- <ion-content [fullscreen]="true" scrollEvents="true" [appFadeHeader]="toolbar"> -->
-<ion-content [fullscreen]="true" scrollEvents="true" [appHideHeader]="header">
+<ion-content [fullscreen]="true" scrollEvents="true" [appHideHeader]="toolbar">
   <img src="../../assets/pexels3.jpg" class="default-img" />
 
   <ion-card *ngFor="let item of [].constructor(20); let i = index">
@@ -27,13 +27,6 @@
   </ion-card>
 </ion-content>
 
-<ion-footer>
-  <ion-toolbar #hideimg>
-    <ion-label>
-      Footer
-    </ion-label>
-  </ion-toolbar>
-</ion-footer>
 <!-- 
 <ion-header>
 

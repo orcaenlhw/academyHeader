@@ -16,3 +16,7 @@
     width: 100%;
 }
 
+ion-header {
+    position: unset;
+    z-index: 1 !important;
+}

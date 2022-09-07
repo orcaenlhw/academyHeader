@@ -1,5 +1,7 @@
 {
   "name": "academyHeader",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

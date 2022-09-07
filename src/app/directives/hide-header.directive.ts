@@ -7,7 +7,6 @@ import { DomController } from '@ionic/angular';
 export class HideHeaderDirective implements OnInit{
 
   @Input('appHideHeader') toolbar: any;
-  @Input('appHideImage') hideimg: any;
   private toolbarHeight = 50;
   constructor(
     private renderer: Renderer2,
@@ -18,7 +17,6 @@ export class HideHeaderDirective implements OnInit{
     //console.log('TEST', this.toolbar);
     
     this.toolbar = this.toolbar.el;
-    this.hideimg = this.hideimg.el;
 
     this.domCtrl.read(() => {
       this.toolbarHeight = this.toolbar.clientHeight;
@@ -42,7 +40,6 @@ export class HideHeaderDirective implements OnInit{
     this.domCtrl.write(() => {
       this.renderer.setStyle(this.toolbar, 'top', `-${newPosition}px`);
       this.renderer.setStyle(this.toolbar, 'opacity', newOpacity);
-      //this.renderer.setStyle(this.hideimg, 'opacity', 1-newOpacity);
     });
   }
 }
