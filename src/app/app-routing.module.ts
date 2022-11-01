@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'headertop',
+    loadChildren: () => import('./headertop/headertop.module').then( m => m.HeadertopPageModule)
+  },
 ];
 
 @NgModule({

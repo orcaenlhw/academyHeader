@@ -1,0 +1,52 @@
+<ion-toolbar [class]="hiding" #toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="close()" shape="round">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()" shape="round">
+        <ion-icon slot="icon-only" name="cart"></ion-icon>
+      </ion-button>
+      <ion-button (click)="close()" shape="round">
+        <ion-icon slot="icon-only" name="share"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+<ion-content [fullscreen]="true" scrollEvents="true" (ionScroll)="onScroll($event)">
+  
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content
+        pullingIcon="chevron-down-circle-outline"
+        pullingText="Pull to refresh"
+        refreshingSpinner="circles"
+        refreshingText="Refreshing...">
+      </ion-refresher-content>
+    </ion-refresher>
+  
+    <ion-toolbar [class]="contentToolbar" #toolinside>
+      <ion-buttons slot="start">
+        <ion-button (click)="close()" shape="round">
+          <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button (click)="close()" shape="round">
+          <ion-icon slot="icon-only" name="cart"></ion-icon>
+        </ion-button>
+        <ion-button (click)="close()" shape="round">
+          <ion-icon slot="icon-only" name="share"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  
+    <img src="../../assets/pexels3.jpg" class="default-img" />
+  
+    <ion-card *ngFor="let item of [].constructor(20); let i = index">
+      <ion-card-header>
+        <ion-card-title>{{ i }}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </ion-content>
+  

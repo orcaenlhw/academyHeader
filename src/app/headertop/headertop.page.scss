@@ -1,0 +1,16 @@
+.toolbarTopHide {
+    opacity: 0;
+}
+
+.toolbarTopShow {
+    opacity: 1;
+}
+
+.toolbarBottomHide {
+    opacity: 0;
+    margin-top: -56px;
+}
+
+.toolbarBottomShow {
+    margin-top: -56px;
+}

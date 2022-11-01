@@ -19,12 +19,16 @@
 <!-- <ion-content [fullscreen]="true" scrollEvents="true" [appFadeHeader]="toolbar"> -->
 <ion-content [fullscreen]="true" scrollEvents="true" [appHideHeader]="toolbar">
   <img src="../../assets/pexels3.jpg" class="default-img" />
+  <ion-button expand="full" color="danger" (click)="gotoheader()">
+    <ion-icon name="caret-forward-circle"></ion-icon>Store Detail
+  </ion-button>
 
   <ion-card *ngFor="let item of [].constructor(20); let i = index">
     <ion-card-header>
       <ion-card-title>{{ i }}</ion-card-title>
     </ion-card-header>
   </ion-card>
+
 </ion-content>
 
 <!-- 

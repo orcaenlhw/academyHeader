@@ -7,7 +7,7 @@ import { GoWildDirective } from './gowild.directive';
 
 
 @NgModule({
-  declarations: [HideHeaderDirective, FadeHeaderDirective, GoWildDirective],
+  declarations: [HideHeaderDirective, FadeHeaderDirective, GoWildDirective,],
   imports: [
     CommonModule
   ],
